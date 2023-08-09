@@ -1,0 +1,23 @@
+
+
+table{
+    width: 100%;
+    border: 2px solod gold;
+    text-align: center;
+    padding: 10px;
+}
+table th , td{
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid gold;
+}
+
+.searchblog{
+    background-color: rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+}
+.searchblog:focus{
+    background-color: #8EBF24;
+    color: black !important;
+
+}

@@ -1,0 +1,21 @@
+
+<div class="container-fluid">
+    <div class="row justify-content-between ">
+        <div class="col-3 text-center liste">
+            <h1 class=" text-primary titre"> {{coursinfo?.title}}</h1>
+            <table class="table">
+                <tr *ngFor="let lesson of coursinfo?.lessons , index as i">
+                    <td (click)="passurl(lesson.urlLesson)">{{lesson.title}} </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-7 pt-5" *ngIf="url">
+            <iframe width="560" height="315" [src]='transform(url)' title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</div>
+<div>
+</div>

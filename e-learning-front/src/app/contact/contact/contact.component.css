@@ -1,0 +1,18 @@
+.message{
+    height: 100px;
+}
+
+
+form{
+    width: 80%;
+    margin: auto;
+}
+.contact{
+    width: 50%;
+    margin: auto;
+}
+
+button{
+    position: relative;
+    left: 50%;
+}

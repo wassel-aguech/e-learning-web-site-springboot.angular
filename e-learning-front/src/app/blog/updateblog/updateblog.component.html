@@ -1,0 +1,37 @@
+<div class="container mt-3 ">
+    <form *ngIf="blogform" [formGroup]="blogform" class="p-3 ">
+        <h1 class="TITRE mb-3 text-warning text-center">UPDATE BLOG</h1>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <input type="text" autofocus formControlName="title" class="form-control mb-3 text-center"
+                        placeholder="BLOG TITLE"
+                        [ngClass]="{'is-invalid':submitted && blogform.get('title')?.errors ,'is-valid':submitted && !blogform.get('title')?.errors}">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <input type="text" formControlName="imageUrl" class="form-control mb-3 text-center"
+                        placeholder="URL IMAGE"
+                        [ngClass]="{'is-invalid':submitted && blogform.get('imageUrl')?.errors ,'is-valid':submitted && !blogform.get('imageUrl')?.errors}">
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="col">
+                <div class="form-group">
+                    <input type="text" formControlName="content" class="form-control mb-3 text-center"
+                        placeholder="CONTENT"
+                        [ngClass]="{'is-invalid':submitted && blogform.get('content')?.errors ,'is-valid':submitted && !blogform.get('content')?.errors}">
+                </div>
+            </div> -->
+        <div class="col">
+            <div class="form-group">
+                <ckeditor [editor]="Editor" formControlName="content"class="text-dark"></ckeditor>
+            </div>
+        </div>
+
+
+        <button class="btn btn-warning mt-3" (click)="update()"> UPDATE BLOG</button>
+    </form>
+</div>

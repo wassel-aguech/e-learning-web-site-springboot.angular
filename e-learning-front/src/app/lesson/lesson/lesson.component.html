@@ -1,0 +1,40 @@
+<div class="container-fluid text-center">
+    <h1 class="text-center text-warning"> - LIST LESSONS - </h1>
+    <button class="btn btn-primary text-center" routerLink="/addlesson"> ADD NEW LESSON </button>
+    <table class="table mt-5">
+        <tr>
+            <th>TITRE</th>
+            <th>LINK</th>
+            <th>DESCRIPTION</th>
+            <th>ID LESSON </th>
+            <th> ID COUR</th>
+            <th> AFFECTUER</th>
+            <th> AITION </th>
+            <th>AFFECRED TO</th>
+        </tr>
+        
+        <tr *ngFor="let lesson of lessons ; index as i">
+            <td>{{lesson.title}} </td>
+            <td>{{lesson.urlLesson}}</td>
+            <td> {{lesson.description}}</td>
+            <td> {{lesson.id}} </td>
+            <td>
+                    <select class="form-group"  [(ngModel)]="cours_id">
+                        <option *ngFor="let cour of cours" [value]="cour.id"> {{cour.id}} </option>
+                    </select>
+            </td>
+            <td> <button class="btn btn-outline-success" (click)="affecterlesson(lesson.id,cours_id,i)"
+                    [ngClass]="{'clicked': isClicked && i== affectedIndex}">AFFECT</button></td>
+            <td>
+                <button class="btn btn-danger"> <img src="./assets/icon/update.png" width="30px"> </button>
+                <button class="btn btn-danger ms-1" (click)="deletelesson(lesson.id)"> <img
+                        src="./assets/icon/delete.png" width="30px"> </button>
+            </td>
+            <td>
+                <h6>
+                    {{affected}}
+                </h6>
+            </td>
+        </tr>
+    </table>
+</div>

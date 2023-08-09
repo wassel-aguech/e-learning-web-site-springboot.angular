@@ -1,0 +1,20 @@
+<table class="table mt-5">
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>COUNTRY</th>
+        <th>TELEPHONE</th>
+        <th>PASSWORD</th>
+        <th> AITION </th>
+    </tr>
+    
+    <tr *ngFor="let user of users ; index as i">
+        <td> {{user.id}} </td>
+        <td>{{user.fullname}} </td>
+        <td>{{user.country}}</td>
+        <td> {{user.numtel}}</td>
+        <td> {{user.password}} </td>
+        <td>
+            <button class="btn btn-danger" (click)="deleteuser(user.id)"> DELETE</button>
+        </td>
+        </tr>

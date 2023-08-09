@@ -1,0 +1,20 @@
+table{
+    width: 80%;
+    margin: auto;
+    border: 1px solid gold;
+    text-align: center;
+}
+
+th , td{
+    text-align: center;
+    border: 1px solid gold;
+    padding: 10px;
+}
+
+
+button{
+    background-color: crimson !important ; 
+    font-weight: bold;
+    color: white;
+    
+}

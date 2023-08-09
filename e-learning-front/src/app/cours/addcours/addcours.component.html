@@ -1,0 +1,31 @@
+<div class="container mt-3 ">
+    <form *ngIf="coursform" [formGroup]="coursform" class="p-3 " (submit)="onsubmit()">
+        <h1 class="TITRE mb-3 text-warning text-center">ADD COURS</h1>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <input type="text" autofocus formControlName="title" class="form-control mb-3 text-center"
+                        placeholder="COURS TITLE"
+                        [ngClass]="{'is-invalid':submitted && coursform.get('title')?.errors ,'is-valid':submitted && !coursform.get('title')?.errors}">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <input type="text" formControlName="imageUrl" class="form-control mb-3 text-center"
+                        placeholder="URL IMAGE"
+                        [ngClass]="{'is-invalid':submitted && coursform.get('imageUrl')?.errors ,'is-valid':submitted && !coursform.get('imageUrl')?.errors}">
+                </div>
+            </div>
+        
+            <div class="col">
+                <div class="form-group">
+                    <input type="text" formControlName="description" class="form-control mb-3 text-center"
+                        placeholder="DESCRIPTION"
+                        [ngClass]="{'is-invalid':submitted && coursform.get('description')?.errors ,'is-valid':submitted && !coursform.get('description')?.errors}">
+                </div>
+            </div>
+           
+        </div>
+        <button class="btn btn-warning mt-3 w-100" type="submit"> ADD </button>
+    </form>
+</div>

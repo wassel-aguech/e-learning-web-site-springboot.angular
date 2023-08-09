@@ -1,0 +1,33 @@
+<div class="container">
+
+
+    <div *ngIf="infoblog">
+
+        <div class="row mt-5 text-center align-items-center">
+            <div class="col-6  ">
+                <div class="titre">
+                    <h1 class="">{{infoblog.title}}</h1>
+                </div>
+                
+      <div class="mt-3 d-flex justify-content-around">
+        <span> <img src="../assets/icon/user.png" width="30px">   :  0 </span>
+        <span> <img src="../assets/icon/coeur.png" width="30px" (click)="liky()">  :  {{likes}} </span>
+      </div>
+            </div>
+            <div class="col-6">
+                <img src={{infoblog.imageUrl}} width="300px" style="border-radius: 10px;">
+            </div>
+
+            <hr class="mt-2">
+
+        </div>
+        <div class="row mt-5">
+            <!-- <p> [innerHTML]="nfoblog.content"</p> -->
+            <p> {{infoblog.content}} </p>
+        </div>
+    </div>
+
+
+
+
+</div>

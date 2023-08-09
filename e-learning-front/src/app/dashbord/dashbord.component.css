@@ -1,0 +1,24 @@
+.titre{
+    background-color: crimson;
+}
+
+.list{
+    width: 200px;
+    height: 450px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid gold;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+ul {
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+    text-transform: none;
+}

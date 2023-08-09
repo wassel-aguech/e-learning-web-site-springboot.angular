@@ -1,0 +1,13 @@
+
+<div class="container">
+  <h1 class="text-center text-lg text-warning" style="text-decoration: underline;">- COURS -</h1>
+  <div class="row text-center my-5">
+    <div class="col-4 my-5 bg-dark"(click)="viewcours(cour.id)"  *ngFor="let cour of cours" >
+
+
+        <img src={{cour.imageUrl}} width="50px" alt="" class="image">
+      <h3 class="text mt-3"> {{cour.title}} </h3> 
+
+    </div> 
+  </div>
+  <div>

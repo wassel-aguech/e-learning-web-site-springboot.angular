@@ -1,0 +1,39 @@
+<div class="container">
+    <h1 class="text-center text-warning">CONTACT US</h1>
+    <p class="text-center contact"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet reiciendis adipisci
+        voluptatibus et sint tenetur aut libero iure odio qui, autem, voluptatem minus assumenda. Obcaecati molestiae
+        eaque nemo asperiores nostrum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet reiciendis adipisci
+        voluptatibus et sint tenetur aut libero iure odio qui, autem, voluptatem minus assumenda. Obcaecati molestiae
+        eaque nemo asperiores nostrum</p>
+    
+    
+        <form *ngIf="contactform" action="javascript:void(0)" [formGroup]="contactform" (submit)="send()">
+        <div class="for-group">
+            <label> NAME</label>
+            <input type="text"
+             placeholder=" YOUR NAME"
+              class="form-control"
+              formControlName="name">
+        </div>
+
+        <div class="for-group">
+            <label> EMAIL</label>
+            <input type="text"
+             placeholder="EMAIL ADRESSE"
+              class="form-control"
+              formControlName="mail">
+        </div>
+        <div class="for-group">
+            <label> MESSAGE</label>
+            <input type="text"
+             placeholder="WRITE MESSAGE"
+              class="form-control message"
+              formControlName="message">
+        </div>
+
+        <button class="btn btn-warning btn-lg  mt-2 ms-6" type="submit"> SEND</button>
+
+    </form>
+
+
+</div>

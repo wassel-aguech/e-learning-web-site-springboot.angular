@@ -1,0 +1,13 @@
+table{
+    width: 80%;
+    margin: auto;
+}
+th , td{
+    border: 1px solid gold;
+    background-color: white;
+}
+
+.clicked {
+    background-color: green;
+    color: white;
+  }

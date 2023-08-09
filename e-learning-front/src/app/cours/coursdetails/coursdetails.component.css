@@ -1,0 +1,24 @@
+
+table{
+    height: 500px;
+}
+table td{
+    border-bottom: 4px solid gold;
+    font-weight: bold;
+    
+}
+table td:hover{
+    cursor: pointer;
+    background-color: gray;
+    color: white;
+}
+
+.liste{
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    height: 100vh;
+    border-radius: 15px;
+    text-transform: uppercase;
+    }
+
+  

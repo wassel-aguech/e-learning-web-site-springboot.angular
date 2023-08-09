@@ -1,0 +1,32 @@
+<div class="container">
+    <h1 class="text-center text-lg text-warning" style="text-decoration: underline;">- BLOGS -</h1>
+
+    <form class="d-flex mb-2 p-2 m-2">
+        <input type="search" [(ngModel)]="titleblog" class="form-control searchblog text-center text-white"
+            placeholder="SEARCH YOUR BLOGS ">
+
+        <button class=" btn btn-primary form-control ms-3" routerLink="/addblog">ADD NEW BLOG</button>
+    </form>
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>IMAGE</th>
+            <th>ACTION</th>
+        </tr>
+        <tbody *ngFor="let blog of blogs , index as i">
+            <tr *ngIf="blog.title.includes(titleblog) || titleblog == null">
+                <td> {{i}} </td>
+                <td> {{blog.title}} </td>
+                <td><img src={{blog.imageUrl}} width="50px"></td>
+                <td>
+                    <button type="button" class="btn btn-warning" (click)="gotoupdate(blog.id)">update</button>
+                    <button type="button" class="btn btn-danger" (click)="delete(blog.id)">delete</button>
+                </td>
+
+
+            </tr>
+        </tbody>
+
+    </table>
+</div>
